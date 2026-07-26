@@ -73,3 +73,11 @@ test("lockfile evita as faixas vulneráveis observadas", () => {
   assert.ok(compareVersions(packageVersion(lockfile, "vite"), "7.3.4") >= 0)
   assert.ok(compareVersions(packageVersion(lockfile, "brace-expansion"), "5.0.8") >= 0)
 })
+
+test("configuração da Vercel publica o diretório gerado pelo Vite", () => {
+  const config = JSON.parse(read("vercel.json"))
+  const packageJson = JSON.parse(read("package.json"))
+
+  assert.equal(config.outputDirectory, "dist")
+  assert.equal(packageJson.engines?.node, "24.x")
+})
