@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router"
 import { profile, showcaseShots } from "../data/portfolioContent"
 import IconSymbol from "./IconSymbol"
 import SectionHeader from "./ui/SectionHeader"

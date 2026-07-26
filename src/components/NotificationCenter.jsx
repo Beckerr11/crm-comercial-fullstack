@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router"
 import { useRealtime } from "../hooks/useRealtime"
 import { formatDateTime, truncateText } from "../utils/formatters"
 import IconSymbol from "./IconSymbol"

@@ -96,7 +96,7 @@ export async function apiFetch(path, options = {}) {
   try {
     payload = raw ? JSON.parse(raw) : null
   } catch {
-    payload = null
+    // Mantém o payload nulo quando a resposta não é JSON.
   }
 
   if (!response.ok) {

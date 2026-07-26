@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Link, useParams } from "react-router-dom"
+import { Link, useParams } from "react-router"
 import QuoteStatusBadge from "../components/QuoteStatusBadge"
 import EmptyState from "../components/ui/EmptyState"
 import IconSymbol from "../components/IconSymbol"

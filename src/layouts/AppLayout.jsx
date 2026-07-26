@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react"
-import { Link, NavLink, Outlet, useLocation, useNavigate } from "react-router-dom"
+import { Link, NavLink, Outlet, useLocation, useNavigate } from "react-router"
 import NotificationCenter from "../components/NotificationCenter"
 import IconSymbol from "../components/IconSymbol"
 import { useAuth } from "../hooks/useAuth"

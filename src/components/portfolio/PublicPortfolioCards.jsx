@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router"
 import IconSymbol from "../IconSymbol"
 import TechBadge from "../TechBadge"
 import { curatedRepositories, productSignals } from "./publicPortfolioData"

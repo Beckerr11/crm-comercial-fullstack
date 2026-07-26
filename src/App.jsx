@@ -1,4 +1,4 @@
-import { Link, Navigate, Route, Routes } from "react-router-dom"
+import { Link, Navigate, Route, Routes } from "react-router"
 import IconSymbol from "./components/IconSymbol"
 import TechBadge from "./components/TechBadge"
 import Crm from "./pages/Crm"
@@ -8,7 +8,7 @@ import { resetCrmDemoData } from "./services/crmApi"
 const stack = [
   "React",
   "Vite",
-  "MongoDB",
+  "localStorage",
   "Dashboard",
 ]
 
