@@ -1,6 +1,6 @@
 # Roteiro de vídeo — CRM Comercial Fullstack
 
-Duracao sugerida: 20 a 45 segundos.
+Duração sugerida: 20 a 45 segundos.
 
 ## Cena 1 — contexto
 

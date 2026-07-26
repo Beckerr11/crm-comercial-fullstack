@@ -1,17 +1,17 @@
 # CRM Comercial Fullstack Demo
 
-Demo publica de CRM comercial para portfolio, com clientes, catalogo, orcamentos, status de proposta e link publico de compartilhamento.
+Demo pública de CRM comercial para portfólio, com clientes, catálogo, orçamentos, status de proposta e link público de compartilhamento.
 
 ![Preview do CRM](./docs/preview-crm-home.png)
 
 ## Destaques
 
-- gestao de clientes
-- catalogo de produtos e servicos
-- criacao e edicao de orcamentos
-- aprovacao e recusa de propostas
-- link publico de proposta
-- persistencia local com `localStorage`
+- gestão de clientes
+- catálogo de produtos e serviços
+- criação e edição de orçamentos
+- aprovação e recusa de propostas
+- link público de proposta
+- persistência local com `localStorage`
 
 ## Stack
 
@@ -39,22 +39,22 @@ npm audit
 ## Estrutura principal
 
 - `src/pages/Crm.jsx`: painel comercial principal
-- `src/pages/PublicQuote.jsx`: tela publica da proposta
+- `src/pages/PublicQuote.jsx`: tela pública da proposta
 - `src/services/crmApi.js`: camada mock de dados e CRUD local
 - `src/data/mockCrmSeed.js`: seed inicial da demo
 
-## Observacoes
+## Observações
 
-- Nao depende do produto privado principal.
+- Não depende do produto privado principal.
 - Não possui backend, banco remoto ou MongoDB: o CRUD demonstrativo roda no navegador e persiste em `localStorage`.
-- O botao `Restaurar demo` recompõe a base inicial.
+- O botão `Restaurar demo` recompõe a base inicial.
 - Preparado para deploy simples em Vercel.
 
 <!-- portfolio-showcase:start -->
 ## Showcase e entrevista
 
 - Showcase local: `showcase/README.md`
-- Roteiro de video: `showcase/video-script.md`
+- Roteiro de vídeo: `showcase/video-script.md`
 - Lista de cenas: `showcase/scenes.md`
 - Legendas sugeridas: `showcase/captions.md`
 - Guia de entrevista: `docs/INTERVIEW_GUIDE.md`

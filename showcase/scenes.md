@@ -7,7 +7,7 @@
 5. Acionar `Restaurar demo` e confirmar o retorno à base inicial.
 6. Encerrar com a URL da demo e do repositório.
 
-## Observacoes
+## Observações
 
 - Evite movimentos rápidos.
 - Prefira capturas limpas e com zoom suave.
