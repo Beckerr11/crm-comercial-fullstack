@@ -1,35 +1,77 @@
-# CRM Comercial Fullstack Demo
+# CRM Comercial — Frontend Product Demo
 
-Demo pública de CRM comercial para portfólio, com clientes, catálogo, orçamentos, status de proposta e link público de compartilhamento.
+[![CI](https://github.com/Beckerr11/crm-comercial-fullstack/actions/workflows/ci.yml/badge.svg)](https://github.com/Beckerr11/crm-comercial-fullstack/actions/workflows/ci.yml)
+
+Showcase público de um fluxo comercial com **clientes, catálogo, propostas, status e compartilhamento**, construído em React para demonstrar modelagem de produto e experiência de uso sem depender de credenciais ou serviços externos.
+
+**Demo:** https://crm-comercial-fullstack.vercel.app  
+**Portfólio:** https://douglasdev.tech
+
+> Apesar do nome histórico do repositório, o snapshot público atual é deliberadamente um **showcase de frontend**. Ele não apresenta backend, autenticação ou banco remoto como funcionalidades concluídas.
 
 ![Preview do CRM](./docs/preview-crm-home.png)
 
-## Destaques
+## O que este projeto demonstra
 
 - gestão de clientes;
 - catálogo de produtos e serviços;
-- criação e edição de orçamentos;
+- criação e edição de propostas/orçamentos;
+- mudança de status comercial;
 - aprovação e recusa de propostas;
-- link público de proposta;
+- rota pública de compartilhamento de proposta;
 - persistência local com `localStorage`;
-- restauração determinística da base de demonstração.
+- seed determinístico para repetir a avaliação;
+- restauração da base de demonstração com um clique;
+- navegação React e organização de fluxo de produto.
+
+## Fluxo principal
+
+```text
+Painel comercial
+      ↓
+Clientes + catálogo
+      ↓
+Criação da proposta
+      ↓
+Status / edição / aprovação
+      ↓
+Link público da proposta
+      ↓
+Persistência local da demo
+```
+
+A camada `crmApi.js` abstrai as operações de dados da interface, mesmo usando armazenamento local. Isso mantém o componente de UI desacoplado do detalhe de persistência e facilita uma futura troca por API real.
 
 ## Stack
 
 - React 19;
-- Vite;
+- Vite 7;
 - React Router 7;
 - React Icons;
-- localStorage.
+- Tailwind CSS;
+- localStorage;
+- ESLint;
+- GitHub Actions.
 
-## Como rodar
+## Executando localmente
+
+Requer Node.js compatível com o projeto e npm.
 
 ```bash
 npm ci
 npm run dev
 ```
 
-## Verificação
+Para gerar o bundle de produção:
+
+```bash
+npm run build
+npm run preview
+```
+
+## Qualidade e CI
+
+O gate local pode ser reproduzido com:
 
 ```bash
 npm run lint
@@ -37,22 +79,40 @@ npm run build
 npm audit --omit=dev --audit-level=high
 ```
 
-O GitHub Actions executa esse mesmo gate em pushes e pull requests para `main`.
+O GitHub Actions executa automaticamente, em pushes e pull requests para `main`:
+
+1. instalação determinística com `npm ci`;
+2. lint;
+3. build de produção;
+4. auditoria de dependências de produção em severidade alta ou superior.
 
 ## Estrutura principal
 
-- `src/pages/Crm.jsx`: painel comercial principal;
-- `src/pages/PublicQuote.jsx`: tela pública da proposta;
-- `src/services/crmApi.js`: camada mock de dados e CRUD local;
-- `src/data/mockCrmSeed.js`: seed inicial da demo.
+```text
+src/
+├── pages/
+│   ├── Crm.jsx          # painel comercial principal
+│   └── PublicQuote.jsx  # proposta pública compartilhável
+├── services/
+│   └── crmApi.js        # camada de operações e CRUD local
+└── data/
+    └── mockCrmSeed.js   # base inicial reproduzível
+```
+
+## Decisões de engenharia
+
+- **Persistência local intencional:** permite abrir a demo e testar o fluxo sem provisionar banco ou fornecer credenciais.
+- **Seed reproduzível:** o avaliador consegue restaurar o mesmo estado inicial e repetir os cenários.
+- **Camada de serviço separada:** a UI não precisa conhecer diretamente todos os detalhes do armazenamento.
+- **Rota pública de proposta:** demonstra um fluxo que atravessa o painel interno e uma experiência externa de cliente.
 
 ## Limites explícitos
 
-Este repositório é um **showcase de frontend e fluxo comercial**. Não depende do produto privado principal e não possui backend, autenticação de produção ou banco remoto. A persistência é intencionalmente local para que qualquer avaliador consiga reproduzir o fluxo sem credenciais externas.
+Este repositório não possui backend, autenticação de produção, banco remoto, processamento de pagamentos ou controle de acesso real. `localStorage` é usado somente para tornar o showcase público simples e reproduzível.
 
-O botão `Restaurar demo` recompõe a base inicial e permite repetir a avaliação do produto.
+O projeto principal DouglasDev possui escopo diferente e é mantido separadamente. Este repositório existe como evidência pública verificável de frontend, fluxo comercial, qualidade de código e CI.
 
 ## Autor
 
 **Douglas Silva**  
-[GitHub](https://github.com/Beckerr11) · [Portfólio](https://douglasdev.tech)
+[GitHub](https://github.com/Beckerr11) · [Portfólio](https://douglasdev.tech) · [LinkedIn](https://www.linkedin.com/in/douglassilva11)
