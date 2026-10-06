@@ -6,6 +6,12 @@ O projeto `crm-comercial-fullstack` foi localizado e vinculado na Vercel. O ende
 
 Em 05/10/2026, a Vercel não tinha variáveis de produção configuradas para esse projeto. Após login, a conta DouglasDev no Render mostrou 17 serviços não agrupados e um serviço `login-api` no projeto agrupado; nenhum CRM foi encontrado. O proprietário informou que ainda não havia MongoDB hospedado. A publicação da nova API e a substituição pública permanecem pendentes da configuração do banco; a versão anterior continua no ar.
 
+Em 06/10/2026, o cluster gratuito `atlas-camel-basket` foi encontrado na organização já vinculada à Vercel, retomado e confirmado ativo. O usuário dedicado `folio-app` foi preparado com `readWrite` apenas em `crm_comercial`, restrito a esse cluster. Sua criação e o preenchimento da conexão secreta no Render dependem da conclusão pelo proprietário. Não reutilizar nem alterar a senha do usuário administrativo existente.
+
+O serviço `folio-crm-api` foi preparado no Render com plano Free, branch `codex/crm-product-refresh`, build `npm ci && npm run build`, start `npm start` e health check `/health`. A criação do serviço ainda não foi enviada.
+
+O código foi enviado à branch de trabalho e o [PR 24](https://github.com/Beckerr11/crm-comercial-fullstack/pull/24) permanece em draft. O [CI remoto 30](https://github.com/Beckerr11/crm-comercial-fullstack/actions/runs/37393571658) terminou com sucesso para o commit `38fd4dca50b09d783fb9fb14a829962b2f4233b8`, incluindo build, lint, formatação, testes de API/persistência, navegador e auditoria de dependências.
+
 ## API no Render
 
 Nesta conta, será necessário um serviço para a nova API. Caso o proprietário identifique uma API de CRM em outra conta, conferir repositório, branch, variáveis e banco antes de substituí-la. O exemplo não deve alterar serviços dos outros projetos.
