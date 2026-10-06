@@ -28,8 +28,28 @@ jobs:
       - name: Lint
         run: npm run lint
 
+      - name: Format
+        run: npm run format:check
+
+      - name: Domain, API and MongoDB restart tests
+        run: npm test
+
       - name: Build production bundle
         run: npm run build
 
       - name: Audit production dependencies
         run: npm audit --omit=dev --audit-level=high
+
+      - name: Install browser
+        run: npx playwright install --with-deps chromium
+
+      - name: Browser flows and accessibility
+        run: npm run test:e2e -- --workers=1
+
+      - name: Attach failure traces
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-failure-traces
+          path: test-results/
+          retention-days: 7

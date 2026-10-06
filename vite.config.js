@@ -1,5 +1,5 @@
-import { defineConfig } from "vite"
-import react from "@vitejs/plugin-react"
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 // The repository is opened through a Windows junction in this workspace.
 // Preserving symlinks keeps Vite/Rollup from resolving HTML entry paths to
@@ -14,4 +14,4 @@ export default defineConfig({
       preserveSymlinks: true,
     },
   },
-})
+});

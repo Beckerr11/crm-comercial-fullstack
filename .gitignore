@@ -23,3 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 .vercel
+work/
+.env
+test-results/
+playwright-report/
+audit-initial.json
