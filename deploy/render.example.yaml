@@ -1,0 +1,22 @@
+# Template: use the exact existing Render service name before applying.
+# This file does not create or update a service automatically.
+services:
+  - type: web
+    name: crm-comercial-fullstack
+    runtime: node
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: 24
+      - key: NODE_ENV
+        value: production
+      - key: HOST
+        value: 0.0.0.0
+      - key: APP_ORIGIN
+        value: https://crm-comercial-fullstack.vercel.app
+      - key: MONGODB_DATABASE
+        value: crm_comercial
+      - key: MONGODB_URI
+        sync: false
