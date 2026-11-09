@@ -5,7 +5,7 @@
 Showcase público de um fluxo comercial com **clientes, catálogo, propostas, status e compartilhamento**, construído em React para demonstrar modelagem de produto e experiência de uso sem depender de credenciais ou serviços externos.
 
 **Demo:** https://crm-comercial-fullstack.vercel.app  
-**Portfólio:** https://douglasdev.tech
+**Portfólio:** https://github.com/Beckerr11
 
 > Apesar do nome histórico do repositório, o snapshot público atual é deliberadamente um **showcase de frontend**. Ele não apresenta backend, autenticação ou banco remoto como funcionalidades concluídas.
 
@@ -110,9 +110,9 @@ src/
 
 Este repositório não possui backend, autenticação de produção, banco remoto, processamento de pagamentos ou controle de acesso real. `localStorage` é usado somente para tornar o showcase público simples e reproduzível.
 
-O projeto principal DouglasDev possui escopo diferente e é mantido separadamente. Este repositório existe como evidência pública verificável de frontend, fluxo comercial, qualidade de código e CI.
+O projeto principal Becker possui escopo diferente e é mantido separadamente. Este repositório existe como evidência pública verificável de frontend, fluxo comercial, qualidade de código e CI.
 
 ## Autor
 
-**Douglas Silva**  
-[GitHub](https://github.com/Beckerr11) · [Portfólio](https://douglasdev.tech) · [LinkedIn](https://www.linkedin.com/in/douglassilva11)
+**Becker**  
+[GitHub](https://github.com/Beckerr11) · [Portfólio](https://github.com/Beckerr11) · [LinkedIn](https://github.com/Beckerr11)

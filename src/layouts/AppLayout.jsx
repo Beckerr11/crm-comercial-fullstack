@@ -57,7 +57,7 @@ function resolveBrandName(workspace, isAuthenticated) {
     return companyName
   }
 
-  return isAuthenticated ? "Workspace principal" : "Douglas Silva"
+  return isAuthenticated ? "Workspace principal" : "Becker"
 }
 
 function resolveBrandSubtitle(workspace, isAuthenticated) {
